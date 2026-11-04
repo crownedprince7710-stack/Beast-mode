@@ -1,1 +1,472 @@
 
+/* =========================================
+   BEAST MODE - MAIN STYLESHEET
+   Black / Red Futuristic Fitness UI
+   ========================================= */
+
+:root {
+    --bg: #080808;
+    --surface: #111111;
+    --surface-light: #191919;
+    --red: #ff2020;
+    --red-dark: #a90000;
+    --white: #ffffff;
+    --muted: #999999;
+    --border: rgba(255, 32, 32, 0.22);
+    --shadow: 0 0 25px rgba(255, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Background */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 50% 0%,
+        rgba(255, 0, 0, 0.12), transparent 45%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* General */
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: auto;
+}
+
+/* Header */
+
+header,
+.navbar {
+    width: 100%;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(8, 8, 8, 0.95);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--red);
+}
+
+/* Main Hero */
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 9vw, 90px);
+    font-weight: 1000;
+    letter-spacing: 5px;
+    line-height: 1.05;
+}
+
+.hero h1 span {
+    color: var(--red);
+    text-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+}
+
+.hero p {
+    max-width: 550px;
+    margin: 20px auto;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: var(--red);
+    color: white;
+    border: 1px solid var(--red);
+    border-radius: 6px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--red);
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--red);
+}
+
+.btn-outline:hover {
+    background: var(--red);
+    color: white;
+}
+
+/* Sections */
+
+section {
+    padding: 65px 5%;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.section-title span {
+    color: var(--red);
+}
+
+/* Cards */
+
+.card {
+    background: linear-gradient(145deg,
+        var(--surface-light), var(--surface));
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: var(--red);
+    box-shadow: var(--shadow);
+    transform: translateY(-4px);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Camera */
+
+.camera-container {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    background: #000;
+    border: 2px solid var(--red);
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow);
+}
+
+.camera-container video,
+.camera-container canvas {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.camera-container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/* Camera status */
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #ff3333;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--red);
+}
+
+/* Workout Stats */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.stat-box {
+    padding: 20px 10px;
+    text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.stat-box h2 {
+    color: var(--red);
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.stat-box p {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Exercise Controls */
+
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+/* Audio */
+
+.audio-panel {
+    background: var(--surface);
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.audio-panel h3 {
+    margin-bottom: 12px;
+}
+
+.audio-panel audio {
+    width: 100%;
+}
+
+/* Progress */
+
+.progress {
+    width: 100%;
+    height: 8px;
+    background: #292929;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--red);
+    box-shadow: 0 0 12px var(--red);
+    transition: width 0.3s;
+}
+
+/* Inputs */
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    color: white;
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--red);
+}
+
+/* History */
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+}
+
+.history-item strong {
+    color: white;
+}
+
+/* Animations */
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 5px var(--red);
+    }
+    50% {
+        box-shadow: 0 0 22px var(--red);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* Footer */
+
+footer {
+    padding: 30px 15px;
+    text-align: center;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+}
+
+footer span {
+    color: var(--red);
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 650px) {
+    header,
+    .navbar {
+        padding: 15px 4%;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 65vh;
+    }
+
+    .hero h1 {
+        letter-spacing: 2px;
+    }
+
+    section {
+        padding: 45px 4%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .stat-box {
+        padding: 15px 5px;
+    }
+
+    .stat-box h2 {
+        font-size: 24px;
+    }
+
+    .stat-box p {
+        font-size: 9px;
+    }
+
+    .btn {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+}
+
