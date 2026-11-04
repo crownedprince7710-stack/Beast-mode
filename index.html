@@ -194,5 +194,6 @@ $('clearHistory').addEventListener('click',()=>{if(confirm('Delete all workout h
 window.addEventListener('beforeunload',()=>{stopStreamOnly();stopBeat();if(state.landmarker)state.landmarker.close();if(state.modelURL)URL.revokeObjectURL(state.modelURL);});
 updateStats();
 </script>
+  <script type="module" src="js/app.js"></script>
 </body>
   </html>
