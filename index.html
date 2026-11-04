@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#090909">
+<title>BEAST MODE — Train Beyond Limits</title>
+<style>
+:root{--bg:#080808;--panel:#111;--panel2:#171717;--red:#ff3038;--red2:#a90012;--text:#f4f4f4;--muted:#999;--line:#292929;--green:#48d597;--amber:#ffc45b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 85% 0%,#26070b 0,transparent 36%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}
+button,select{font:inherit}button{cursor:pointer}.app{max-width:1180px;margin:auto;padding:18px 16px 42px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0 22px;border-bottom:1px solid var(--line)}.brand{font-weight:1000;letter-spacing:2px;font-size:20px}.brand span{color:var(--red)}.tag{font-size:10px;letter-spacing:2px;color:var(--muted);margin-top:3px}.status-pill{border:1px solid #3a2022;background:#1b0c0e;color:#ff7378;padding:8px 11px;border-radius:30px;font-size:11px;letter-spacing:1px;font-weight:800}.hero{padding:30px 0 24px;display:grid;grid-template-columns:1.3fr .7fr;gap:20px;align-items:center}.eyebrow{color:var(--red);font-weight:900;letter-spacing:3px;font-size:11px}.hero h1{font-size:clamp(42px,8vw,76px);line-height:.92;margin:12px 0;letter-spacing:-3px;font-weight:1000}.hero h1 em{font-style:normal;color:var(--red)}.hero p{color:#aaa;max-width:530px;line-height:1.6}.hero-mark{border:1px solid #3b171b;background:linear-gradient(145deg,#20090c,#100d0e 60%);border-radius:20px;padding:24px;min-height:170px;display:flex;flex-direction:column;justify-content:space-between}.hero-mark strong{font-size:42px;letter-spacing:-2px}.hero-mark small{color:#b8a5a6;letter-spacing:2px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat,.panel,.exercise{background:linear-gradient(145deg,#171717,#0e0e0e);border:1px solid var(--line);border-radius:16px}.stat{padding:16px}.stat small{color:var(--muted);font-size:10px;letter-spacing:1.5px;font-weight:800}.stat strong{display:block;font-size:27px;margin-top:8px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:28px 0 13px}.section-head h2{font-size:18px;margin:0;letter-spacing:.5px}.section-head p{margin:4px 0 0;color:var(--muted);font-size:12px}.exercise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.exercise{padding:18px;transition:.2s;border-color:#292929;text-align:left;color:var(--text)}.exercise:hover,.exercise.active{border-color:var(--red);transform:translateY(-2px);box-shadow:0 8px 30px #ff303812}.exercise .symbol{font-size:28px}.exercise h3{margin:12px 0 5px}.exercise p{font-size:12px;color:var(--muted);line-height:1.45;margin:0}.exercise .choose{display:inline-block;color:var(--red);font-size:10px;letter-spacing:1.5px;font-weight:900;margin-top:15px}.panel{padding:18px;margin-top:16px}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.panel-head h2{font-size:16px;margin:0}.subtle{font-size:11px;color:var(--muted)}.btn{border:0;border-radius:10px;padding:12px 16px;font-weight:900;letter-spacing:.7px;background:var(--red);color:white;box-shadow:0 5px 18px #ff303822}.btn:hover{filter:brightness(1.12)}.btn.secondary{background:#242424;color:#eee;box-shadow:none;border:1px solid #383838}.btn.ghost{background:transparent;color:#ddd;border:1px solid #383838;box-shadow:none}.btn:disabled{opacity:.4;cursor:not-allowed}.btn-row{display:flex;gap:8px;flex-wrap:wrap}.workout-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,.8fr);gap:14px}.camera-wrap{position:relative;background:#030303;border:1px solid #333;border-radius:14px;overflow:hidden;aspect-ratio:16/10;min-height:230px}.camera-wrap video,.camera-wrap canvas{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;transform:scaleX(-1)}.camera-wrap canvas{pointer-events:none}.camera-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px;color:#aaa;line-height:1.6}.camera-placeholder b{display:block;color:white;margin-bottom:5px}.camera-overlay{position:absolute;left:12px;top:12px;background:#000b;border:1px solid #444;border-radius:20px;padding:7px 10px;font-size:10px;letter-spacing:1px}.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.metric{padding:14px;background:#0a0a0a;border:1px solid #282828;border-radius:12px}.metric small{font-size:9px;color:#999;letter-spacing:1.3px;font-weight:800}.metric strong{display:block;font-size:27px;margin-top:5px}.metric .unit{font-size:11px;color:#aaa}.wide{grid-column:1/-1}.progress{height:6px;background:#292929;border-radius:9px;overflow:hidden;margin-top:8px}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--red2),var(--red));transition:width .2s}.notice{border:1px solid #3a3030;background:#171313;color:#d7c6c6;padding:12px;border-radius:10px;font-size:12px;line-height:1.5;margin-top:12px}.notice.error{border-color:#74242a;background:#210c0e;color:#ffb5b8}.notice.good{border-color:#24543f;background:#0d1b15;color:#9be9c3}.notice.warn{border-color:#665027;background:#1b160b;color:#ffdc96}.hidden{display:none!important}.audio-controls{display:grid;grid-template-columns:1fr 1fr;gap:12px}.audio-card{background:#0c0c0c;border:1px solid #2b2b2b;padding:14px;border-radius:12px}.audio-card h3{font-size:13px;margin:0 0 6px}.audio-card p{font-size:11px;color:#999;line-height:1.5;margin:0 0 12px}.range{width:100%;accent-color:var(--red)}.history-list{display:grid;gap:8px}.history-item{display:flex;justify-content:space-between;gap:10px;padding:12px;border-radius:10px;background:#0c0c0c;border:1px solid #252525;font-size:12px}.history-item span{color:#aaa}.empty{color:#777;font-size:12px;padding:12px 0}.footer{color:#666;text-align:center;font-size:10px;letter-spacing:1.3px;margin-top:28px}.loader{display:inline-block;width:14px;height:14px;border:2px solid #6b3336;border-top-color:var(--red);border-radius:50%;animation:spin .7s linear infinite;vertical-align:middle;margin-right:7px}@keyframes spin{to{transform:rotate(360deg)}}.danger-text{color:#ff7378}.green-text{color:var(--green)}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.hero-mark{min-height:120px}.workout-layout{grid-template-columns:1fr}.exercise-grid{grid-template-columns:1fr}.exercise{display:flex;align-items:center;gap:14px}.exercise .symbol{font-size:24px}.exercise h3{margin:0 0 4px}.exercise .choose{margin-top:7px}.exercise-copy{flex:1}.audio-controls{grid-template-columns:1fr}.grid{gap:8px}.stat{padding:12px}.stat strong{font-size:22px}.app{padding:14px 12px 34px}.hero h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+  <div><div class="brand">BEAST<span>MODE</span></div><div class="tag">TRAIN BEYOND LIMITS</div></div>
+  <div class="status-pill" id="topStatus">● SYSTEM READY</div>
+</header>
+
+<section class="hero">
+  <div><div class="eyebrow">NO EXCUSES. JUST RESULTS.</div><h1>UNLEASH<br><em>YOURSELF.</em></h1><p>Train with intent. Track every rep. Let your effort set the pace. Your camera-powered workout assistant is ready when you are.</p>
+    <div class="btn-row"><button class="btn" id="startSelected">START WORKOUT</button><button class="btn secondary" id="scrollExercises">CHOOSE EXERCISE</button></div>
+  </div>
+  <div class="hero-mark"><small>BEAST MODE PROTOCOL</small><strong>01<span style="color:var(--red)">/</span>∞</strong><small>DISCIPLINE OVER MOTIVATION</small></div>
+</section>
+
+<section class="grid" aria-label="Workout statistics">
+  <div class="stat"><small>TOTAL WORKOUTS</small><strong id="totalWorkouts">0</strong></div>
+  <div class="stat"><small>TOTAL REPS</small><strong id="totalReps">0</strong></div>
+  <div class="stat"><small>BEST SESSION</small><strong id="bestSession">—</strong></div>
+</section>
+
+<div class="section-head" id="exerciseSection"><div><h2>SELECT YOUR BATTLE</h2><p>Choose an exercise to begin tracking.</p></div></div>
+<section class="exercise-grid">
+  <button class="exercise active" data-exercise="curl"><div class="symbol">💪</div><div class="exercise-copy"><h3>Bicep Curls</h3><p>Track elbow flexion and extension.</p><span class="choose">SELECT EXERCISE ↗</span></div></button>
+  <button class="exercise" data-exercise="squat"><div class="symbol">🏋️</div><div class="exercise-copy"><h3>Squats</h3><p>Track knee bend and standing position.</p><span class="choose">SELECT EXERCISE ↗</span></div></button>
+  <button class="exercise" data-exercise="pushup"><div class="symbol">⚡</div><div class="exercise-copy"><h3>Push-ups</h3><p>Track elbow bend and lockout.</p><span class="choose">SELECT EXERCISE ↗</span></div></button>
+</section>
+
+<section class="panel" id="workoutPanel">
+  <div class="panel-head"><div><h2 id="workoutTitle">BICEP CURLS</h2><div class="subtle">LIVE WORKOUT TRACKER</div></div><span class="status-pill" id="phasePill">READY</span></div>
+  <div class="workout-layout">
+    <div>
+      <div class="camera-wrap">
+        <video id="cameraVideo" autoplay muted playsinline></video>
+        <canvas id="poseCanvas"></canvas>
+        <div class="camera-placeholder" id="cameraPlaceholder"><div><b>CAMERA NOT STARTED</b>Press START CAMERA to enable real-time pose tracking.<br>Place your full body in frame.</div></div>
+        <div class="camera-overlay" id="cameraOverlay">CAMERA OFFLINE</div>
+      </div>
+      <div class="btn-row" style="margin-top:12px">
+        <button class="btn" id="cameraStart">START CAMERA</button>
+        <button class="btn secondary" id="pauseBtn" disabled>PAUSE</button>
+        <button class="btn ghost" id="endBtn" disabled>END WORKOUT</button>
+        <button class="btn ghost" id="flipBtn" disabled>FLIP CAMERA</button>
+      </div>
+      <div class="notice" id="cameraMessage" role="status">Camera access is requested only after you press START CAMERA. Pose processing runs locally in this browser.</div>
+    </div>
+    <div>
+      <div class="metrics">
+        <div class="metric"><small>REPETITIONS</small><strong id="repCount">0</strong></div>
+        <div class="metric"><small>ELAPSED TIME</small><strong id="elapsed">00:00</strong></div>
+        <div class="metric"><small>POSE CONFIDENCE</small><strong id="confidence">—<span class="unit">%</span></strong></div>
+        <div class="metric"><small>JOINT ANGLE</small><strong id="jointAngle">—<span class="unit">°</span></strong></div>
+        <div class="metric wide"><small>TRACKING PHASE</small><strong id="repPhase" style="font-size:18px">Waiting for camera</strong><div class="progress"><span id="repProgress"></span></div></div>
+        <div class="metric wide"><small>LAST REP DURATION</small><strong id="lastRep">—</strong></div>
+      </div>
+      <div class="notice warn" id="placementTip">Position tip: curls — show shoulder, elbow and wrist; squats — show hip, knee and ankle; push-ups — use a side view.</div>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="panel-head"><div><h2>AUDIO CONTROL</h2><div class="subtle">KEEP YOUR ENERGY UP</div></div><span class="subtle">LOCAL AUDIO</span></div>
+  <div class="audio-controls">
+    <div class="audio-card"><h3>BACKGROUND BEAT</h3><p>Procedurally generated workout beat. No music file required.</p><div class="btn-row"><button class="btn secondary" id="musicBtn">▶ PLAY BEAT</button><button class="btn ghost" id="musicStop">STOP</button></div><label class="subtle" for="volume" style="display:block;margin-top:12px">VOLUME</label><input class="range" id="volume" type="range" min="0" max="100" value="35"></div>
+    <div class="audio-card"><h3>MOTIVATIONAL VOICE</h3><p>Browser speech synthesis. Background beat ducks while the voice plays.</p><div class="btn-row"><button class="btn" id="motivateBtn">⚡ BEAST MODE ON</button><button class="btn ghost" id="testVoice">TEST VOICE</button></div><div class="subtle" style="margin-top:10px">Voice: <select id="voiceSelect" style="background:#191919;color:white;border:1px solid #444;border-radius:6px;padding:5px;max-width:100%"><option value="">Default voice</option></select></div></div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="panel-head"><div><h2>WORKOUT HISTORY</h2><div class="subtle">YOUR WORK. YOUR PROGRESS.</div></div><button class="btn ghost" id="clearHistory">CLEAR</button></div>
+  <div id="historyList" class="history-list"><div class="empty">No completed workouts yet. Start your first session.</div></div>
+</section>
+<div class="footer">BEAST MODE • BUILT FOR CONSISTENCY • POSE TRACKING IS EXPERIMENTAL</div>
+</div>
+
+<script type="module">
+const $ = id => document.getElementById(id);
+const state = {exercise:'curl',landmarker:null,initPromise:null,stream:null,raf:0,active:false,paused:false,startedAt:0,elapsedBeforePause:0,repCount:0,phase:'ready',lowSeen:false,lastTransition:0,repStart:0,lastRepDuration:null,minAngle:180,maxAngle:0,repAngles:[],repTimes:[],lastTimestamp:0,front:true,videoReady:false,modelURL:null,voiceDucking:false};
+const exerciseConfig = {
+ curl:{title:'BICEP CURLS',up:150,down:65,joints:[11,13,15],minConfidence:.55,tip:'Curls: use a side or slight front angle. Keep shoulder, elbow and wrist visible. Both arms may be visible; the tracker uses one side.'},
+ squat:{title:'SQUATS',up:155,down:100,joints:[23,25,27],minConfidence:.55,tip:'Squats: use a side view and keep hip, knee and ankle visible. Stand far enough back to show your full body.'},
+ pushup:{title:'PUSH-UPS',up:155,down:90,joints:[11,13,15],minConfidence:.55,tip:'Push-ups: use a side view close to floor height. Keep shoulder, elbow and wrist visible throughout the movement.'}
+};
+const canvas=$('poseCanvas'),ctx=canvas.getContext('2d'),video=$('cameraVideo');
+let audioCtx=null,beatGain=null,beatTimer=null,beatOsc=[];
+
+function setMessage(message,type=''){const el=$('cameraMessage');el.className='notice '+type;el.textContent=message;}
+function setTop(text){$('topStatus').textContent='● '+text;}
+function formatTime(seconds){const m=Math.floor(seconds/60),s=Math.floor(seconds%60);return String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');}
+function currentElapsed(){return state.elapsedBeforePause+(state.active&&!state.paused?(Date.now()-state.startedAt)/1000:0);}
+function updateElapsed(){ $('elapsed').textContent=formatTime(currentElapsed()); if(state.active&&!state.paused)requestAnimationFrame(updateElapsed);}
+function updateStats(){const history=loadHistory();$('totalWorkouts').textContent=history.length;$('totalReps').textContent=history.reduce((n,x)=>n+(x.reps||0),0);$('bestSession').textContent=history.length?Math.max(...history.map(x=>x.reps||0))+' reps':'—';renderHistory();}
+function loadHistory(){try{return JSON.parse(localStorage.getItem('beastModeHistory')||'[]')}catch{return []}}
+function saveHistory(item){const h=loadHistory();h.unshift(item);localStorage.setItem('beastModeHistory',JSON.stringify(h.slice(0,40)));updateStats();}
+function renderHistory(){const h=loadHistory(),el=$('historyList');if(!h.length){el.innerHTML='<div class="empty">No completed workouts yet. Start your first session.</div>';return;}el.innerHTML=h.map(x=>`<div class="history-item"><div><b>${escapeHTML(x.exercise)}</b><br><span>${escapeHTML(x.date)} • ${escapeHTML(x.duration)}</span></div><div style="text-align:right"><b>${x.reps} reps</b><br><span>${x.avgRep?x.avgRep.toFixed(1)+'s avg rep':'—'}</span></div></div>`).join('');}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function selectExercise(name){if(state.active){setMessage('End the current workout before changing exercise.','warn');return;}state.exercise=name;document.querySelectorAll('.exercise').forEach(b=>b.classList.toggle('active',b.dataset.exercise===name));$('workoutTitle').textContent=exerciseConfig[name].title;$('placementTip').textContent='Position tip: '+exerciseConfig[name].tip;$('repCount').textContent='0';$('repPhase').textContent='Waiting for camera';$('jointAngle').innerHTML='—<span class="unit">°</span>';}
+document.querySelectorAll('.exercise').forEach(b=>b.addEventListener('click',()=>selectExercise(b.dataset.exercise)));
+$('startSelected').addEventListener('click',()=>{$('workoutPanel').scrollIntoView({behavior:'smooth'});});
+$('scrollExercises').addEventListener('click',()=>$('exerciseSection').scrollIntoView({behavior:'smooth'}));
+
+async function loadPoseLibrary(){
+  if(state.landmarker)return state.landmarker;
+  if(state.initPromise)return state.initPromise;
+  state.initPromise=(async()=>{
+    setTop('LOADING AI MODEL');$('cameraStart').disabled=true;$('cameraStart').innerHTML='<span class="loader"></span>LOADING AI';
+    try{
+      let vision;
+      try{vision=await import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/+esm');}
+      catch(e){throw codedError('MEDIAPIPE_LIBRARY_FAILED','Could not load the MediaPipe JavaScript library. Check internet access or CDN restrictions.',e);}
+      let fileset;
+      try{fileset=await vision.FilesetResolver.forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/wasm');}
+      catch(e){throw codedError('WASM_LOAD_FAILED','MediaPipe WASM files could not load. Your browser preview may block external WASM assets.',e);}
+      const modelURL='https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task';
+      let response;
+      try{response=await fetch(modelURL,{mode:'cors',cache:'force-cache'});}
+      catch(e){throw codedError('MODEL_DOWNLOAD_FAILED','Could not download the pose model. Check your connection or whether Google Storage is blocked.',e);}
+      if(!response.ok)throw codedError('MODEL_DOWNLOAD_FAILED',`Pose model download failed (HTTP ${response.status}).`,new Error('HTTP '+response.status));
+      const modelBlob=await response.blob();
+      if(!modelBlob.size)throw codedError('MODEL_DOWNLOAD_FAILED','The downloaded pose model is empty.',new Error('Empty model'));
+      state.modelURL=URL.createObjectURL(modelBlob);
+      const options={baseOptions:{modelAssetPath:state.modelURL,delegate:'GPU'},runningMode:'VIDEO',numPoses:1,minPoseDetectionConfidence:.55,minPosePresenceConfidence:.55,minTrackingConfidence:.55};
+      try{state.landmarker=await vision.PoseLandmarker.createFromOptions(fileset,options);setMessage('AI model loaded with GPU acceleration. Start the camera when ready.','good');}
+      catch(gpuError){
+        console.warn('GPU_INITIALIZATION_FAILED',gpuError);
+        try{state.landmarker=await vision.PoseLandmarker.createFromOptions(fileset,{...options,baseOptions:{modelAssetPath:state.modelURL,delegate:'CPU'}});setMessage('GPU initialization failed; AI model loaded using CPU fallback. Tracking may be slower.','warn');}
+        catch(cpuError){throw codedError('CPU_INITIALIZATION_FAILED','GPU initialization failed and CPU fallback could not initialize the pose model.',cpuError);}
+      }
+      return state.landmarker;
+    }catch(err){console.error(err.code||'AI_INITIALIZATION_FAILED',err);throw err;}
+    finally{ $('cameraStart').disabled=false;$('cameraStart').textContent='START CAMERA';state.initPromise=null;}
+  })();
+  return state.initPromise;
+}
+function codedError(code,message,cause){const e=new Error(message,{cause});e.code=code;return e;}
+function explainError(e){const code=e.code||'AI_INITIALIZATION_FAILED';setTop('AI ERROR');setMessage(`${code}: ${e.message||'Unknown initialization error'}${location.protocol!=='https:'&&location.hostname!=='localhost'?' Open this app from HTTPS or localhost.':''}`,'error');}
+async function startCamera(){
+  if(!window.isSecureContext){setMessage('CAMERA_NOT_SUPPORTED: Camera access requires HTTPS or localhost. Open the deployed app using an HTTPS address.','error');return;}
+  if(!navigator.mediaDevices?.getUserMedia){setMessage('CAMERA_NOT_SUPPORTED: This browser or embedded preview does not provide camera access. Try opening the app directly in Chrome.','error');return;}
+  try{
+    await loadPoseLibrary();
+    setMessage('Requesting camera permission…','');
+    let stream;
+    try{stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:state.front?'user':'environment',width:{ideal:960},height:{ideal:540},frameRate:{ideal:30,max:30}},audio:false});}
+    catch(e){if(e.name==='NotAllowedError'||e.name==='PermissionDeniedError')throw codedError('CAMERA_PERMISSION_DENIED','Camera permission was denied. Allow camera access for this website in Chrome site settings.',e);if(e.name==='NotFoundError'||e.name==='DevicesNotFoundError')throw codedError('CAMERA_NOT_SUPPORTED','No available camera was found on this device.',e);throw codedError('CAMERA_NOT_SUPPORTED',`Camera could not start (${e.name||'unknown error'}). Close other apps using the camera and retry.`,e);}
+    state.stream=stream;video.srcObject=stream;
+    await new Promise((resolve,reject)=>{if(video.readyState>=2)return resolve();video.onloadedmetadata=()=>resolve();video.onerror=()=>reject(new Error('Video stream failed to load'));});
+    await video.play();state.videoReady=true;
+    canvas.width=video.videoWidth||640;canvas.height=video.videoHeight||480;
+    $('cameraPlaceholder').classList.add('hidden');$('cameraOverlay').textContent='● CAMERA LIVE';$('cameraStart').disabled=true;$('pauseBtn').disabled=false;$('endBtn').disabled=false;$('flipBtn').disabled=false;
+    state.active=true;state.paused=false;state.startedAt=Date.now();state.elapsedBeforePause=0;state.repCount=0;state.phase='ready';state.lowSeen=false;state.minAngle=180;state.maxAngle=0;state.repAngles=[];state.repTimes=[];state.lastTransition=0;state.lastRepDuration=null;
+    $('repCount').textContent='0';$('phasePill').textContent='LIVE';$('pauseBtn').textContent='PAUSE';$('repPhase').textContent='Get into position';setTop('CAMERA LIVE');setMessage('Camera is live. Keep the required joints visible and move through a controlled full range of motion.','good');updateElapsed();loop();
+  }catch(e){explainError(e);stopStreamOnly();$('cameraStart').disabled=false;}
+}
+function stopStreamOnly(){if(state.stream){state.stream.getTracks().forEach(t=>t.stop());state.stream=null;}video.srcObject=null;state.videoReady=false;cancelAnimationFrame(state.raf);ctx.clearRect(0,0,canvas.width,canvas.height);$('cameraOverlay').textContent='CAMERA OFFLINE';$('cameraPlaceholder').classList.remove('hidden');}
+function flipCamera(){if(!state.stream)return;state.front=!state.front;const wasActive=state.active;const paused=state.paused;stopStreamOnly();startCamera().then(()=>{if(wasActive&&paused)togglePause();});}
+function togglePause(){if(!state.active)return;if(!state.paused){state.elapsedBeforePause=currentElapsed();state.paused=true;cancelAnimationFrame(state.raf);$('pauseBtn').textContent='RESUME';$('phasePill').textContent='PAUSED';$('repPhase').textContent='Workout paused';}else{state.paused=false;state.startedAt=Date.now();$('pauseBtn').textContent='PAUSE';$('phasePill').textContent='LIVE';loop();updateElapsed();}}
+function endWorkout(){if(!state.active)return;const duration=currentElapsed(),reps=state.repCount;state.active=false;state.paused=false;cancelAnimationFrame(state.raf);stopStreamOnly();if(reps>0){const avg=state.repTimes.length?state.repTimes.reduce((a,b)=>a+b,0)/state.repTimes.length:null;saveHistory({exercise:exerciseConfig[state.exercise].title,reps,duration:formatTime(duration),avgRep:avg,date:new Date().toLocaleString()});}state.elapsedBeforePause=duration;$('elapsed').textContent=formatTime(duration);$('cameraStart').disabled=false;$('pauseBtn').disabled=true;$('endBtn').disabled=true;$('flipBtn').disabled=true;$('phasePill').textContent='COMPLETED';$('repPhase').textContent=`Session complete • ${reps} reps`;$('pauseBtn').textContent='PAUSE';setTop('SYSTEM READY');setMessage(`Workout ended. ${reps} valid repetitions recorded. Pose metrics are experimental and should not be treated as medical or coaching certification.`,'good');}
+$('cameraStart').addEventListener('click',startCamera);$('pauseBtn').addEventListener('click',togglePause);$('endBtn').addEventListener('click',endWorkout);$('flipBtn').addEventListener('click',flipCamera);
+function angle(a,b,c){const ab=[a.x-b.x,a.y-b.y],cb=[c.x-b.x,c.y-b.y];const dot=ab[0]*cb[0]+ab[1]*cb[1],mag=Math.hypot(...ab)*Math.hypot(...cb);if(!mag)return null;return Math.acos(Math.max(-1,Math.min(1,dot/mag)))*180/Math.PI;}
+function visibility(l){return Math.min(l.visibility??1,l.presence??1);}
+function chooseSide(landmarks,indices){const left=indices.map(i=>landmarks[i]),rightIdx=indices.map(i=>({11:12,13:14,15:16,23:24,25:26,27:28}[i]??i)),right=rightIdx.map(i=>landmarks[i]);const score=arr=>Math.min(...arr.map(visibility));return score(right)>score(left)?right:left;}
+function drawPose(landmarks){const w=canvas.width,h=canvas.height;ctx.clearRect(0,0,w,h);const connections=[[11,12],[11,13],[13,15],[12,14],[14,16],[11,23],[12,24],[23,24],[23,25],[25,27],[24,26],[26,28],[27,29],[29,31],[28,30],[30,32]];ctx.lineWidth=Math.max(2,w/320);ctx.strokeStyle='#ff3944';ctx.fillStyle='#fff';for(const [a,b] of connections){const p=landmarks[a],q=landmarks[b];if(visibility(p)<.35||visibility(q)<.35)continue;ctx.beginPath();ctx.moveTo(p.x*w,p.y*h);ctx.lineTo(q.x*w,q.y*h);ctx.stroke();}for(const p of landmarks){if(visibility(p)<.45)continue;ctx.beginPath();ctx.arc(p.x*w,p.y*h,Math.max(2,w/180),0,Math.PI*2);ctx.fill();}}
+function loop(){if(!state.active||state.paused||!state.videoReady)return;state.raf=requestAnimationFrame(loop);if(video.readyState<2)return;const now=performance.now();if(now-state.lastTimestamp<45)return;state.lastTimestamp=now;try{const result=state.landmarker.detectForVideo(video,now);const pose=result.landmarks?.[0];if(!pose){ctx.clearRect(0,0,canvas.width,canvas.height);$('confidence').innerHTML='0<span class="unit">%</span>';$('repPhase').textContent='No pose detected';$('repProgress').style.width='0%';return;}drawPose(pose);processPose(pose);}catch(e){console.error('POSE_DETECTION_FAILED',e);setMessage('POSE_DETECTION_FAILED: '+e.message,'error');}}
+function processPose(lm){const cfg=exerciseConfig[state.exercise],side=chooseSide(lm,cfg.joints),conf=Math.min(...side.map(visibility));$('confidence').innerHTML=Math.round(conf*100)+'<span class="unit">%</span>';if(conf<cfg.minConfidence){$('repPhase').textContent='Low confidence — reposition';$('repProgress').style.width='0%';return;}const a=angle(side[0],side[1],side[2]);if(a===null||!Number.isFinite(a))return;$('jointAngle').innerHTML=Math.round(a)+'<span class="unit">°</span>';state.minAngle=Math.min(state.minAngle,a);state.maxAngle=Math.max(state.maxAngle,a);const t=performance.now();const atBottom=a<=cfg.down,atTop=a>=cfg.up;
+if(atBottom){state.lowSeen=true;if(!state.repStart)state.repStart=t;state.phase='down';$('repPhase').textContent='Movement detected — complete the rep';$('repProgress').style.width='55%';}
+else if(atTop&&state.lowSeen){if(t-state.lastTransition>450){state.repCount++;const duration=state.repStart?(t-state.repStart)/1000:null;state.lastRepDuration=duration;state.repAngles.push({min:Math.round(state.minAngle),max:Math.round(state.maxAngle)});if(duration!==null)state.repTimes.push(duration);state.lastTransition=t;state.lowSeen=false;state.repStart=0;state.minAngle=180;state.maxAngle=0;$('repCount').textContent=state.repCount;$('lastRep').textContent=duration!==null?duration.toFixed(1)+' s':'—';$('repPhase').textContent='REP COMPLETE';$('repProgress').style.width='100%';if(state.repCount%5===0)motivate(`Five more reps completed. Stay strong. Keep your form controlled.`);}}
+else{$('repPhase').textContent=state.lowSeen?'Return to starting position':'Ready — begin movement';$('repProgress').style.width=state.lowSeen?'70%':'10%';}
+}
+
+function getAudio(){if(!audioCtx){audioCtx=new (window.AudioContext||window.webkitAudioContext)();beatGain=audioCtx.createGain();beatGain.gain.value=Number($('volume').value)/100;beatGain.connect(audioCtx.destination);}if(audioCtx.state==='suspended')audioCtx.resume();return audioCtx;}
+function playBeat(){const ac=getAudio();if(beatTimer)return;const master=beatGain;const tick=()=>{if(!beatTimer)return;const t=ac.currentTime;const osc=ac.createOscillator(),gain=ac.createGain();osc.type='sine';osc.frequency.value=state.beatStep%4===0?95:state.beatStep%2===0?65:45;gain.gain.setValueAtTime(state.beatStep%4===0?.24:.11,t);gain.gain.exponentialRampToValueAtTime(.001,t+.12);osc.connect(gain);gain.connect(master);osc.start(t);osc.stop(t+.13);state.beatStep=(state.beatStep||0)+1;};state.beatStep=0;beatTimer=setInterval(tick,260);tick();$('musicBtn').textContent='Ⅱ PAUSE BEAT';}
+function stopBeat(){if(beatTimer){clearInterval(beatTimer);beatTimer=null;}$('musicBtn').textContent='▶ PLAY BEAT';}
+$('musicBtn').addEventListener('click',()=>beatTimer?stopBeat():playBeat());$('musicStop').addEventListener('click',stopBeat);$('volume').addEventListener('input',e=>{if(beatGain)beatGain.gain.setTargetAtTime(Number(e.target.value)/100*(state.voiceDucking?.18:1),audioCtx.currentTime,.08);});
+function populateVoices(){const sel=$('voiceSelect');if(!('speechSynthesis'in window))return;const voices=speechSynthesis.getVoices();sel.innerHTML='<option value="">Default voice</option>'+voices.map((v,i)=>`<option value="${i}">${escapeHTML(v.name)} (${escapeHTML(v.lang)})</option>`).join('');}
+if('speechSynthesis'in window){populateVoices();speechSynthesis.onvoiceschanged=populateVoices;}
+function motivate(text='You are stronger than your excuses. One more rep. Beast mode activated.'){if(!('speechSynthesis'in window)){setMessage('Speech synthesis is not supported by this browser.','warn');return;}const utter=new SpeechSynthesisUtterance(text);const voices=speechSynthesis.getVoices(),idx=$('voiceSelect').value;if(idx!==''&&voices[Number(idx)])utter.voice=voices[Number(idx)];utter.rate=1.02;utter.pitch=.82;utter.volume=1;utter.onstart=()=>{state.voiceDucking=true;if(beatGain&&audioCtx)beatGain.gain.setTargetAtTime(Number($('volume').value)/100*.18,audioCtx.currentTime,.12);};utter.onend=utter.onerror=()=>{state.voiceDucking=false;if(beatGain&&audioCtx)beatGain.gain.setTargetAtTime(Number($('volume').value)/100,audioCtx.currentTime,.2);};speechSynthesis.cancel();speechSynthesis.speak(utter);}
+$('motivateBtn').addEventListener('click',()=>motivate());$('testVoice').addEventListener('click',()=>motivate('Focus. Breathe. Control the movement. You have got this.'));
+$('clearHistory').addEventListener('click',()=>{if(confirm('Delete all workout history?')){localStorage.removeItem('beastModeHistory');updateStats();}});
+window.addEventListener('beforeunload',()=>{stopStreamOnly();stopBeat();if(state.landmarker)state.landmarker.close();if(state.modelURL)URL.revokeObjectURL(state.modelURL);});
+updateStats();
+</script>
+</body>
+  </html>
